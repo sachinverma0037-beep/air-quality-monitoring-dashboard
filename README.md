@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # India Air Quality Monitoring and Environmental Analysis System
 
 A Streamlit dashboard (frontend.py) on top of a reusable Python backend (backend.py).
@@ -86,3 +87,7 @@ CPCB Central Control Room portal (airquality.cpcb.gov.in/ccr). If your CO is in 
 | API key rejected (HTTP 401) | Re-copy the key; no spaces or quotes |
 | Rate limit message | Wait a minute; use fewer cities/stations or a shorter date range |
 | Excel upload fails | `pip install openpyxl` |
+=======
+# air-quality-monitoring-dashboard
+Air Quality Monitoring and Analysis System using Python, Streamlit and OpenAQ API.
+>>>>>>> ad3df49b3b97ced2b88076bb6ee7ecc75992af33
