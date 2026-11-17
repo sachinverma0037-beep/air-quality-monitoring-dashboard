@@ -1,0 +1,325 @@
+<html><head><meta charset='utf-8'><title>Air Quality Report</title><style>body{font-family:Segoe UI,Arial,sans-serif;max-width:1000px;margin:30px auto;padding:0 16px;color:#222}h1{color:#0b5394}h2{border-bottom:2px solid #0b5394;padding-bottom:4px;margin-top:32px}table{border-collapse:collapse;margin:10px 0;font-size:14px}th,td{border:1px solid #ccc;padding:6px 10px;text-align:right}th{background:#0b5394;color:#fff}</style></head><body>
+<h1>India Air Quality Monitoring and Environmental Analysis Report</h1>
+<p>Generated: 2026-11-03 12:45</p>
+<h2>1. Dataset overview</h2>
+<p>Data source: Live OpenAQ API data</p><p>Records: 2841 | Cities: 2 | Period: 2016-02-05 to 2026-11-02 | Pollutants: PM2.5, PM10, NO2, SO2, CO, O3</p>
+<h2>2. Data cleaning</h2>
+<p>Rows before/after: 2841 / 2841. Duplicates removed: 0. Same-day rows merged: 0. Invalid values set to missing: 1. Missing-value method: interpolate. Outlier action: flag (IQR k=1.5). Outliers detected: {&#x27;PM2.5&#x27;: 218, &#x27;PM10&#x27;: 160, &#x27;NO2&#x27;: 54, &#x27;SO2&#x27;: 70, &#x27;CO&#x27;: 72, &#x27;O3&#x27;: 138}</p>
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Missing before</th>
+      <th>Missing after</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>PM2.5</th>
+      <td>37</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>PM10</th>
+      <td>31</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>NO2</th>
+      <td>21</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>SO2</th>
+      <td>442</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>CO</th>
+      <td>175</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>O3</th>
+      <td>168</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<h2>3. Descriptive statistics</h2>
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Count</th>
+      <th>Mean</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Min</th>
+      <th>Max</th>
+      <th>Std Dev</th>
+      <th>Variance</th>
+      <th>Q1 (25%)</th>
+      <th>Q2 (50%)</th>
+      <th>Q3 (75%)</th>
+      <th>IQR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>PM2.5</th>
+      <td>2841.0</td>
+      <td>97.14</td>
+      <td>58.15</td>
+      <td>36.0</td>
+      <td>1.94</td>
+      <td>985.00</td>
+      <td>120.02</td>
+      <td>14405.96</td>
+      <td>28.00</td>
+      <td>58.15</td>
+      <td>109.30</td>
+      <td>81.30</td>
+    </tr>
+    <tr>
+      <th>PM10</th>
+      <td>2841.0</td>
+      <td>164.48</td>
+      <td>118.00</td>
+      <td>107.0</td>
+      <td>0.00</td>
+      <td>1560.00</td>
+      <td>148.41</td>
+      <td>22025.17</td>
+      <td>60.20</td>
+      <td>118.00</td>
+      <td>222.50</td>
+      <td>162.30</td>
+    </tr>
+    <tr>
+      <th>NO2</th>
+      <td>2841.0</td>
+      <td>43.11</td>
+      <td>31.84</td>
+      <td>11.4</td>
+      <td>0.33</td>
+      <td>446.00</td>
+      <td>35.90</td>
+      <td>1289.11</td>
+      <td>14.70</td>
+      <td>31.84</td>
+      <td>61.55</td>
+      <td>46.85</td>
+    </tr>
+    <tr>
+      <th>SO2</th>
+      <td>2841.0</td>
+      <td>36.02</td>
+      <td>32.20</td>
+      <td>43.6</td>
+      <td>0.00</td>
+      <td>1973.78</td>
+      <td>49.60</td>
+      <td>2460.46</td>
+      <td>14.23</td>
+      <td>32.20</td>
+      <td>43.58</td>
+      <td>29.35</td>
+    </tr>
+    <tr>
+      <th>CO</th>
+      <td>2841.0</td>
+      <td>0.54</td>
+      <td>0.38</td>
+      <td>0.0</td>
+      <td>0.00</td>
+      <td>12.15</td>
+      <td>0.74</td>
+      <td>0.55</td>
+      <td>0.00</td>
+      <td>0.38</td>
+      <td>0.82</td>
+      <td>0.82</td>
+    </tr>
+    <tr>
+      <th>O3</th>
+      <td>2841.0</td>
+      <td>29.89</td>
+      <td>23.29</td>
+      <td>8.8</td>
+      <td>0.00</td>
+      <td>257.80</td>
+      <td>26.30</td>
+      <td>691.78</td>
+      <td>10.06</td>
+      <td>23.29</td>
+      <td>40.95</td>
+      <td>30.90</td>
+    </tr>
+  </tbody>
+</table>
+<h2>4. Correlation matrix (Pearson)</h2>
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PM2.5</th>
+      <th>PM10</th>
+      <th>NO2</th>
+      <th>SO2</th>
+      <th>CO</th>
+      <th>O3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>PM2.5</th>
+      <td>1.000</td>
+      <td>0.438</td>
+      <td>0.320</td>
+      <td>-0.005</td>
+      <td>0.223</td>
+      <td>0.085</td>
+    </tr>
+    <tr>
+      <th>PM10</th>
+      <td>0.438</td>
+      <td>1.000</td>
+      <td>0.559</td>
+      <td>0.091</td>
+      <td>0.322</td>
+      <td>0.256</td>
+    </tr>
+    <tr>
+      <th>NO2</th>
+      <td>0.320</td>
+      <td>0.559</td>
+      <td>1.000</td>
+      <td>0.160</td>
+      <td>0.353</td>
+      <td>0.361</td>
+    </tr>
+    <tr>
+      <th>SO2</th>
+      <td>-0.005</td>
+      <td>0.091</td>
+      <td>0.160</td>
+      <td>1.000</td>
+      <td>-0.120</td>
+      <td>0.001</td>
+    </tr>
+    <tr>
+      <th>CO</th>
+      <td>0.223</td>
+      <td>0.322</td>
+      <td>0.353</td>
+      <td>-0.120</td>
+      <td>1.000</td>
+      <td>0.309</td>
+    </tr>
+    <tr>
+      <th>O3</th>
+      <td>0.085</td>
+      <td>0.256</td>
+      <td>0.361</td>
+      <td>0.001</td>
+      <td>0.309</td>
+      <td>1.000</td>
+    </tr>
+  </tbody>
+</table>
+<h2>5. Environmental classification</h2>
+<p>CPCB AQI: sub-index per pollutant by linear interpolation between CPCB breakpoints; AQI is the maximum sub-index; PM2.5/PM10/NO2/SO2 use 24-hour averages, CO/O3 use 8-hour values (daily mean used as approximation for daily data). Strict CPCB rule applied (at least 3 pollutants incl. PM).</p>
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>City</th>
+      <th>Date</th>
+      <th>AQI</th>
+      <th>AQI_Category</th>
+      <th>Dominant_Pollutant</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Delhi</td>
+      <td>2026-11-02</td>
+      <td>403.0</td>
+      <td>Severe</td>
+      <td>PM2.5</td>
+    </tr>
+    <tr>
+      <td>Mumbai</td>
+      <td>2026-11-02</td>
+      <td>70.0</td>
+      <td>Satisfactory</td>
+      <td>PM10</td>
+    </tr>
+  </tbody>
+</table>
+<h2>6. Alerts and recommendations</h2>
+<p>Most polluted city (latest): Delhi - AQI 403 (Severe), dominant pollutant PM2.5.</p><p>Recommendations: Stay indoors and keep windows closed. Avoid all outdoor physical activity. Seek medical advice if you have breathing difficulty, chest pain or persistent cough. Avoid burning waste, crop residue and biomass. Enforce vehicle emission checks and clean fuels. Use covered transport of construction material and water sprinkling.</p>
+<h2>7. Trend analysis (linear regression, all selected cities)</h2>
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Pollutant</th>
+      <th>Trend</th>
+      <th>Change per 30 days</th>
+      <th>Change per 30 days (%)</th>
+      <th>R²</th>
+      <th>p-value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PM2.5</td>
+      <td>Decreasing</td>
+      <td>-0.310</td>
+      <td>-0.32</td>
+      <td>0.013</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>PM10</td>
+      <td>Decreasing</td>
+      <td>-0.848</td>
+      <td>-0.51</td>
+      <td>0.062</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>NO2</td>
+      <td>Decreasing</td>
+      <td>-0.243</td>
+      <td>-0.57</td>
+      <td>0.084</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>SO2</td>
+      <td>Increasing</td>
+      <td>0.163</td>
+      <td>0.52</td>
+      <td>0.044</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>CO</td>
+      <td>Decreasing</td>
+      <td>-0.010</td>
+      <td>-1.52</td>
+      <td>0.303</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>O3</td>
+      <td>Decreasing</td>
+      <td>-0.288</td>
+      <td>-0.90</td>
+      <td>0.197</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</body></html>
